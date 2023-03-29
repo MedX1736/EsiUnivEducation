@@ -1,7 +1,7 @@
 /******* Bootstrap Theming ********/
 
 $primary: #2878EB;
-$secondary: #F14D5D;
+$secondary: c;
 $light: #ECF4FF;
 $dark: #120F2D;
 
@@ -106,7 +106,7 @@ h6,
 }
 
 .jumbotron {
-    background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(40, 120, 235, 0.9)), url(../img/header.jpg), no-repeat center center;
+    background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(40, 120, 235, 0.9)), url(../img/header.png), no-repeat center center;
     background-size: cover;
 }
 
@@ -266,4 +266,26 @@ h6,
 
 .testimonial-carousel .owl-nav .owl-prev:hover {
     background: $primary;
+}
+
+.card {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #ccc ;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .center {
+    text-align: center;
+  }
+
+li.univ:hover{
+    text-decoration: underline;
 }
