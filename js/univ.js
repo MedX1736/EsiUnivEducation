@@ -1,17 +1,26 @@
 list = [
     {
         "Univ" : "Esi",
-        "Cours" : ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","SYSR"]
+        "Cours" : ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","Worked"]
     },
     {
         "Univ" : "Enp",
         "Cours" : ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","SYSR"]
     }
 ]
+// Get the query parameters from the current URL
+const params = new URLSearchParams(window.location.search);
+
+// Get the value of a specific parameter
+const paramValue = params.get('univ');
+
+// Log the value to the console
+// console.log(paramValue);
 
 // Define the list of courses
-const courses = ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","SYSR"];
+const courses = list.find((e) => e.Univ === paramValue).Cours;
 
+// console.log(courses)
 // Get the container element to hold the cards
 const container = document.getElementById("course-cards");
 

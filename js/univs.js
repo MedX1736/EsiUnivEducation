@@ -9,7 +9,7 @@ const centreList2 = document.getElementById("centre-list-2");
 // Read Data From File
 
 const estItems = [
-    "Université  de Jijel - Mohammed Seddik Ben yahia",
+    "Esi",
     "Université  de Sétif 1 - Ferhat Abbas",
     "Université de Tébessa - Larbi Tébessi",
     "Université  de Annaba - Badji Mokhtar",
@@ -55,7 +55,7 @@ function populateList(list, items,region) {
     for (let i = 0; i < liElements.length; i++) {
         liElements[i].addEventListener("click", () => {
             // Handle click event here
-            window.location.href = `univ.html/?univ=${items[i]}`;
+            window.location.href = `univ.html?univ=${items[i]}`;
         });
     }
 }
