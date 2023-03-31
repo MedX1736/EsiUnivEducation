@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Edukate - Online Education Website Template</title>
+    <title>Esi Education</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -87,8 +87,8 @@
       style="margin-bottom: 90px"
     >
       <div class="container text-center my-5 py-5">
-        <h1 class="text-white mt-4 mb-4">Learn From Home</h1>
-        <h1 class="text-white display-1 mb-5">Education Courses</h1>
+        <h1 class="text-white mt-4 mb-4">Apprendre De Chez Soi</h1>
+        <h1 class="text-white display-1 mb-5">Cours En Ligne</h1>
         <div class="mx-auto mb-5" style="width: 100%; max-width: 600px">
           <div class="input-group">
             <div class="input-group-prepend">
@@ -393,76 +393,8 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-      // JavaScript code to populate the lists
-      const estList1 = document.getElementById("est-list-1");
-      const estList2 = document.getElementById("est-list-2");
-      const ouestList1 = document.getElementById("ouest-list-1");
-      const ouestList2 = document.getElementById("ouest-list-2");
-      const centreList1 = document.getElementById("centre-list-1");
-      const centreList2 = document.getElementById("centre-list-2");
+    <script src="js/univ.js"></script>
 
-      // Read Data From File
-
-      const estItems = [
-        "Université  de Jijel - Mohammed Seddik Ben yahia",
-        "Université  de Sétif 1 - Ferhat Abbas",
-        "Université de Tébessa - Larbi Tébessi",
-        "Université  de Annaba - Badji Mokhtar",
-        "Université de Bordj Bou Arréridj - Mohamed Bachir El Ibrahimi",
-        "Université  de Khenchela - Abbas Laghrour",
-        "Université  de Constantine 1 - Frères Mentouri",
-        "Université  de Oum El Bouaghi - Larbi Ben M'hidi",
-      ];
-      const ouestItems = [
-        "Universitéd'Oran1 - Ahmed Ben Bella",
-        "Université de Béchar - Mohamed Tahri",
-        "Université  de Mascara - Mustapha Stambouli",
-        "Université de Saida - Tahar Moulay",
-        "Université  de Tlemcen - Abou Bekr Belkaid",
-        "Université  d'Adrar - Ahme   d Draya",
-        "Université  de Tiaret - Ibn Khaldoun",
-        "Université  Sidi Bel Abbès - Djillali Liabes",
-      ];
-      const centreItems = [
-        "Université d'Alger 1 - Benyoucef Benkhedda",
-        "Université  de Bouira - Akli Mohand Oulhadj",
-        "Université  de Djelfa - Ziane Achour",
-        "Université de Ghardaia",
-        "Université  de Khemis Miliana - Djilali Bounaama",
-        "Université  Médéa - Yahia Farès",
-        "Université de Tamenghasset",
-        "Université des sciences et de la technologie d'Alger, Houari Boumediène",
-        "Université de Béjaia - Abderrahmane Mira",
-        "Université  de Boumerdès - M'hamed Bougara",
-        "Université  Blida 1 - Saad Dahlab",
-        "Université de Tizi Ouzou - Mouloud Maameri",
-      ];
-
-      // Function to populate a list with the given items
-      function populateList(list, items) {
-        let html = "";
-        items.forEach((item) => {
-          html += `<li class="univ" >${item}</li>`;
-        });
-        list.innerHTML = html;
-        // Add click event listener to each li element
-			const liElements = list.getElementsByTagName("li");
-			for (let i = 0; i < liElements.length; i++) {
-				liElements[i].addEventListener("click", () => {
-					// Handle click event here
-					console.log(`Clicked on ${items[i]}`);
-				});
-			}
-      }
-
-      // Populate the lists with the sample data
-      populateList(estList1, estItems.slice(0, estItems.length/2));
-      populateList(estList2, estItems.slice(estItems.length/2));
-      populateList(ouestList1, ouestItems.slice(0, ouestItems.length/2));
-      populateList(ouestList2, ouestItems.slice(ouestItems.length/2));
-      populateList(centreList1, centreItems.slice(0, centreItems.length/2));
-      populateList(centreList2, centreItems.slice(centreItems.length/2));
-    </script>
+    
   </body>
 </html>
