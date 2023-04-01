@@ -16,9 +16,11 @@ const paramValue = params.get('univ');
 
 // Log the value to the console
 // console.log(paramValue);
+document.getElementById("Univh1").innerHTML = paramValue;
+
 
 // Define the list of courses
-const courses = list.find((e) => e.Univ === paramValue).Cours;
+const courses = list.find((e) => e.Univ.toLowerCase() === paramValue.toLowerCase()).Cours;
 
 // console.log(courses)
 // Get the container element to hold the cards
@@ -65,7 +67,7 @@ for (let i = 0; i < courses.length; i++) {
   // Populate the lists with hyperlinks to other HTML pages
   for (let j = 1; j <= 5; j++) {
     const link = document.createElement("a");
-    link.href = `${course}-page-${j}.html`;
+    link.href = `video.html`;
     link.textContent = `${course} Page ${j}`;
 
     const listItem = document.createElement("li");
