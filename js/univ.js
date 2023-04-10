@@ -20,6 +20,7 @@ document.getElementById("Univh1").innerHTML = paramValue;
 
 
 // Define the list of courses
+univ = paramValue.toLowerCase();
 const courses = list.find((e) => e.Univ.toLowerCase() === paramValue.toLowerCase()).Cours;
 
 // console.log(courses)
@@ -65,10 +66,11 @@ for (let i = 0; i < courses.length; i++) {
   const list2 = card.querySelector(`#${course.toLowerCase()}-list-2`);
 
   // Populate the lists with hyperlinks to other HTML pages
-  for (let j = 1; j <= 5; j++) {
+  const videos = ["Cours.mp4","Cours 2.mp4","Cours 3.mp4","Cours 4.mp4","Cours 5.mp4"]
+  for (let j = 0  ; j < videos.length; j++) {
     const link = document.createElement("a");
-    link.href = `video.html`;
-    link.textContent = `${course} Page ${j}`;
+    link.href = `video.html?univ=${univ}&cours=${course}&video=${videos[j]}`;
+    link.textContent = `${videos[j]}`;
 
     const listItem = document.createElement("li");
     listItem.appendChild(link);
