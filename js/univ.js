@@ -1,11 +1,46 @@
 list = [
     {
         "Univ" : "Esi",
-        "Cours" : ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","Worked"]
+        "Modules" : [
+          {
+            "Name":
+          "Réseau1",
+            "Cours":[
+              'Généralités sur les réseaux',
+              'Couche Physique',
+              'Couche liaison de données',
+              'Technologies des réseaux locaux',
+              'Adressage IP et Routage'
+            ]
+        },
+          {
+            "Name":
+          "TPGO",
+            "Cours":[
+            ]
+        },
+          {
+            "Name":
+          "Compil",
+            "Cours":[
+            ]
+        },
+          {
+            "Name":
+          "MachineLearning",
+            "Cours":[
+            ]
+        },
+          {
+            "Name":
+          "ALSDS",
+            "Cours":[]
+        },
+]
     },
     {
         "Univ" : "Enp",
-        "Cours" : ["Archi","TPGO","Comp","ML","Res","ALSDS","OPTIM","SSR","SYSR"]
+        "Cours" : ["Meca","TPGO","Comp","ML","Archi1","ALSDS","OPTIM","SSR","SYSR"]
     }
 ]
 // Get the query parameters from the current URL
@@ -19,17 +54,21 @@ const paramValue = params.get('univ');
 document.getElementById("Univh1").innerHTML = paramValue;
 
 
-// Define the list of courses
-univ = paramValue.toLowerCase();
-const courses = list.find((e) => e.Univ.toLowerCase() === paramValue.toLowerCase()).Cours;
-
-// console.log(courses)
+// Define the list of modules
+univ = paramValue;
+const modules = list.find((e) => e.Univ.toLowerCase() === paramValue.toLowerCase()).Modules;
+// console.log(modules)
 // Get the container element to hold the cards
 const container = document.getElementById("course-cards");
 
-// Loop through the courses and create a new card for each course
-for (let i = 0; i < courses.length; i++) {
-  const course = courses[i];
+// Loop through the modules and create a new card for each course
+for (let i = 0; i < modules.length; i++) {
+  const course = modules[i].Name;
+  var videos = modules[i].Cours;
+  if (videos.length === 0){
+    videos = ["Cours","Cours 2","Cours 3","Cours 4","Cours 5"];
+  }
+
 
   // Create a new card element
   const card = document.createElement("div");
@@ -62,11 +101,9 @@ for (let i = 0; i < courses.length; i++) {
   card.innerHTML = content;
 
   // Get the lists to populate with hyperlinks
-  const list1 = card.querySelector(`#${course.toLowerCase()}-list-1`);
+  const list1 = card.querySelector(`#${course.toLowerCase()}-list-1`)
   const list2 = card.querySelector(`#${course.toLowerCase()}-list-2`);
-
   // Populate the lists with hyperlinks to other HTML pages
-  const videos = ["Cours.mp4","Cours 2.mp4","Cours 3.mp4","Cours 4.mp4","Cours 5.mp4"]
   for (let j = 0  ; j < videos.length; j++) {
     const link = document.createElement("a");
     link.href = `video.html?univ=${univ}&cours=${course}&video=${videos[j]}`;
