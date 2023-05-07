@@ -4,7 +4,7 @@ list = [
         "Modules" : [
           {
             "Name":
-          "Reseau1",
+          "Archi",
             "Cours":[
               'Généralités sur les réseaux',
               'Couche Physique',
