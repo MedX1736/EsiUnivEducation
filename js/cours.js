@@ -6,13 +6,15 @@ const region = params.get('region');
 const cours = params.get('cours');
 const video = params.get('video');
 
-const apiLink = `http://adrss:81/api/${region}/${univ}/${cours}`
+const apiLink = `http://192.168.137.49:81/api/${region}/${univ}/${cours}`
 
 const iframeVideo = document.getElementById('video-frame');
 iframeVideo.src = `${apiLink}/Cours.mp4`;
 
-const iframePdf = document.getElementById('pdf-frame');
+const iframePdf = document.getElementById('pdf-iframe');
+const iDataPdf = document.getElementById('pdf-data');
 iframePdf.src = `${apiLink}/sample.pdf`;
+iDataPdf.data = `${apiLink}/sample.pdf`;
 
 
 
