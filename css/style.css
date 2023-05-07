@@ -5,7 +5,25 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,700,900");
+@import url("fonts/Roboto/*");
+@import url("fonts/OpenSans/*");
+@import url("fonts/Jost/*");
+
+@font-face {
+  font-family: 'Jost';
+  src: 
+  url('fonts/Jost/Jost-Bold.ttf') format('truetype'),
+  url('fonts/Jost/Jost-Medium.ttf') format('truetype'),
+  url('fonts/Jost/Jost-SemiBold.ttf') format('truetype')
+  ;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: 
+  url('fonts/Roboto/Roboto-Regular.ttf') format('truetype')
+  ;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

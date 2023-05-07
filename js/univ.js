@@ -80,7 +80,7 @@ for (let i = 0; i < modules.length; i++) {
       <div class="border-bottom pb-3 mb-3">
         <h1 class="text-center mb-3">${course}
           <button type="button" data-toggle="collapse" data-target="#collapse-${i}" aria-expanded="true" aria-controls="collapse-${i}">
-            <i class="fa fa-arrow-down"></i>
+          <img src="img/arrow-down.png" alt="arrow-down">
           </button>
         </h1>
       </div>
