@@ -2,10 +2,11 @@
 const params = new URLSearchParams(window.location.search);
 // Get the value of a specific parameter
 const univ = params.get('univ');
+const region = params.get('region');
 const cours = params.get('cours');
 const video = params.get('video');
 
-const apiLink = `http://adrss:81/api/${univ}/${cours}`
+const apiLink = `http://adrss:81/api/${region}/${univ}/${cours}`
 
 const iframeVideo = document.getElementById('video-frame');
 iframeVideo.src = `${apiLink}/Cours.mp4`;

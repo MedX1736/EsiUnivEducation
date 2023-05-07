@@ -48,6 +48,7 @@ const params = new URLSearchParams(window.location.search);
 
 // Get the value of a specific parameter
 const paramValue = params.get('univ');
+const region = params.get('region');
 
 // Log the value to the console
 // console.log(paramValue);
@@ -106,7 +107,7 @@ for (let i = 0; i < modules.length; i++) {
   // Populate the lists with hyperlinks to other HTML pages
   for (let j = 0  ; j < videos.length; j++) {
     const link = document.createElement("a");
-    link.href = `video.html?univ=${univ}&cours=${course}&video=${videos[j]}`;
+    link.href = `video.html?region=${region}&univ=${univ}&cours=${course}&video=${videos[j]}`;
     link.textContent = `${videos[j]}`;
 
     const listItem = document.createElement("li");

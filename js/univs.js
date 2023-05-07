@@ -55,7 +55,7 @@ function populateList(list, items,region) {
     for (let i = 0; i < liElements.length; i++) {
         liElements[i].addEventListener("click", () => {
             // Handle click event here
-            window.location.href = `univ.html?univ=${items[i]}`;
+            window.location.href = `univ.html?region=${region}&univ=${items[i]}`;
         });
     }
 }
