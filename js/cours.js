@@ -6,7 +6,7 @@ const region = params.get('region');
 const cours = params.get('cours');
 const video = params.get('video');
 
-const apiLink = `http://10.0.9.39:81/api/${region}/${univ}/${cours}`
+const apiLink = `http://10.0.9.225:81/api/${region}/${univ}/${cours}`
 
 const iframeVideo = document.getElementById('video-source');
 iframeVideo.src = `${apiLink}/Cours.webm`;
