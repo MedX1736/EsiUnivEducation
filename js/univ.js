@@ -4,7 +4,7 @@ list = [
         "Modules" : [
           {
             "Name":
-          "Archi",
+          "Res",
             "Cours":[
               'Généralités sur les réseaux',
               'Couche Physique',
@@ -17,6 +17,10 @@ list = [
             "Name":
           "TPGO",
             "Cours":[
+              "Heuristiques",
+              "Programmation Fonctionnelle",
+              "Programmation Procedurale",
+              "Complexite",
             ]
         },
           {
