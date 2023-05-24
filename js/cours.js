@@ -6,10 +6,12 @@ const region = params.get('region');
 const cours = params.get('cours');
 const video = params.get('video');
 
+document.getElementById("title").innerHTML = video ;
+
 const apiLink = `http://10.0.9.225:81/api/${region}/${univ}/${cours}`
 
 const iframeVideo = document.getElementById('video-source');
-iframeVideo.src = `${apiLink}/Cours.webm`;
+iframeVideo.src = `${apiLink}/Cours.webm?autoplay=1`;
 
 const iframePdf = document.getElementById('pdf-iframe');
 const iDataPdf = document.getElementById('pdf-data');
@@ -34,3 +36,11 @@ function showPDF() {
     document.getElementById("video-container").style.display = "none";
 }
 
+
+function downloadVideo(){
+    window.location.assign(`${apiLink}/Cours.webm`);
+}
+
+function downloadPDF(){
+    window.location.assign(`${apiLink}/sample.pdf`);
+}

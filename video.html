@@ -59,7 +59,7 @@
            <div class="video-block section-padding">
               <div class="row">
                  <div class="col-md-8">
-                  <section class="subnav">
+                  <section id="subnav">
                      <div class="col-6 p-2 text-center active" onclick="showVideo()" id="video-icon">
                         <img src="img/cam.png" class="img-fluid" alt="Video icon">
                       </div>
@@ -92,8 +92,24 @@
                              </iframe>
                            </object>
                        </div>
+                      <section id="subnav-download">
+                        <div class="col-6 p-2 text-center active" onclick="downloadVideo()" id="video-icon">
+                          <p>
+                            Télécharger Vidéo
+                            <img src="img/video-player.png" class="img-fluid" alt="Video icon">
+                          </p>
+                         </div>
+                         <div class="col-6 p-2 text-center" onclick="downloadPDF()"  id="pdf-icon">
+                          <p id="download button"href="path/to/video.mp4" download>
+                            Télécharger Document
+                            <img src="img/download-file.png" class="img-fluid" alt="PDF icon">
+                          </p>
+                         </div>
+                         </section>
+
+
                        <div class="single-video-title box mb-3">
-                          <h2 id="title"><a href="#">Cours Title</a></h2>
+                          <h2 id="title"></h2>
                           <p class="mb-0"><i class="fas fa-eye"></i> 2,729,347 views</p>
                        </div>
                        <div class="single-video-author box mb-3">
@@ -544,7 +560,8 @@
      opacity: unset;
 }
 
-.subnav {
+
+#subnav , #subnav-download{
   display: flex;
   justify-content: space-between;
   height: 50px;
@@ -552,7 +569,13 @@
   background-color: #2878EB;
   padding: 0;
 }
-
+ 
+#subnav-download p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+}
 #subnav .selected-icon {
   height: 3px;
   background-color: #333;
@@ -584,7 +607,7 @@
   opacity: 1;
 }
 
-#subnav .text-center:hover {
+#subnav , #subnav-download .text-center:hover {
   cursor: pointer;
 }
 
