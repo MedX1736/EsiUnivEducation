@@ -9,7 +9,6 @@ const centreList2 = document.getElementById("centre-list-2");
 // Read Data From File
 
 const estItems = [
-    "Esi",
     "Université  de Sétif 1 - Ferhat Abbas",
     "Université de Tébessa - Larbi Tébessi",
     "Université  de Annaba - Badji Mokhtar",
@@ -29,6 +28,7 @@ const ouestItems = [
     "Université  Sidi Bel Abbès - Djillali Liabes",
 ];
 const centreItems = [
+    "Esi",
     "Université d'Alger 1 - Benyoucef Benkhedda",
     "Université  de Bouira - Akli Mohand Oulhadj",
     "Université  de Djelfa - Ziane Achour",
