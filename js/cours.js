@@ -8,15 +8,15 @@ const video = params.get('video');
 
 document.getElementById("title").innerHTML = video ;
 
-const apiLink = `http://10.0.9.225:81/api/${region}/${univ}/${cours}`
+const apiLink = `http://192.168.178.114/api/${region}/${univ}/${cours}`
 
 const iframeVideo = document.getElementById('video-source');
 iframeVideo.src = `${apiLink}/Cours.webm?autoplay=1`;
 
 const iframePdf = document.getElementById('pdf-iframe');
 const iDataPdf = document.getElementById('pdf-data');
-iframePdf.src = `${apiLink}/sample.pdf`;
-iDataPdf.data = `${apiLink}/sample.pdf`;
+iframePdf.src = `${apiLink}/Cours.pdf`;
+iDataPdf.data = `${apiLink}/Cours.pdf`;
 
 
 

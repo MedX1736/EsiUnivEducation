@@ -13,6 +13,17 @@ list = [
               'Adressage IP et Routage'
             ]
         },
+        {
+          "Name":
+        "ALSDS",
+          "Cours":[
+            "ELEMENTS DE BASE",
+            "PRESENTATION DU FORMALISME ALGORITHMIQUE",
+            "ELEMENTS DE BASE DU LANGAGE PASCAL",
+            "LA MODULARITE",
+            "LES STRUCTURES DE DONNEES STATIQUES"
+          ]
+      },
           {
             "Name":
           "TPGO",
@@ -34,11 +45,6 @@ list = [
           "MachineLearning",
             "Cours":[
             ]
-        },
-          {
-            "Name":
-          "ALSDS",
-            "Cours":[]
         },
 ]
     },

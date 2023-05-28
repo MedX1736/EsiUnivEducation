@@ -67,7 +67,10 @@
               <h4 class="mt-5">Select Video files to upload</h4>
               <p class="land">or drag and drop video files</p>
               <div class="mt-4">
-                 <a class="btn btn-outline-primary" href="file-upload.html">Upload Video</a>
+                  <form id="upload-form" action="http://localhost:3000/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" id="file-input" style="display: none;" />
+                    <a href="#" onclick="onUpload()" class="btn btn-outline-primary">Upload File</a>
+                </form>
               </div>
            </div>
         </div>
@@ -187,6 +190,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
 </body>
 
 </html>
